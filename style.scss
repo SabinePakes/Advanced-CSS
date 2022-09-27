@@ -1,5 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
 
+@import "./variables";
+$primary-color: #ffffff; 
+
 * {
   box-sizing: border-box;
 }
@@ -7,7 +10,7 @@
 body {
   color: #555555;
   margin: 0;
-  font-family: "Roboto", sans-serif;
+  font-family: $font-stack;
   font-weight: bold;
   background-color: #c3cfe2;
   min-height: calc(100vh - 100px);
@@ -15,7 +18,7 @@ body {
 
 a {
   text-decoration: none;
-  color: #ffffff;
+  color: $primary-color;
 }
 
 ul {
@@ -42,8 +45,9 @@ ul {
   transform: translateX(calc(-100% + 60px));
 }
 
-.social-media i {
-  color: #fff;
+.social-media{
+  i {
+  color: $primary-color;;
   font-size: 20px;
   padding: 15px;
   text-align: center;
@@ -51,29 +55,30 @@ ul {
   transform: rotate(0deg);
 }
 
-.social-media a {
-  color: #fff;
+.social-media{
+  a {
+  color: $primary-color;;
   padding: 0 10px;
 }
 
 .social-media.twitter {
-  background-color: #00aced;
+  background-color: $backgroundcolor2;
 }
 
 .social-media.linkedin {
-  background-color: #007bb6;
+  background-color: $backgroundcolor3;
 }
 
 .social-media.blog {
-  background-color: #e17b77;
+  background-color:$backgroundcolor4;
 }
 
 .social-media.facebook {
-  background-color: #3b5998;
+  background-color:$backgroundcolor5 ;
 }
 
 .social-media.github {
-  background-color: #333;
+  background-color:$backgroundcolor ;
 }
 
 
@@ -85,40 +90,44 @@ ul {
   padding-top: 200px;
   width: 100%;
 }
-.container .testimonial-header {
+.container {
+  .testimonial-header {
   display: flex;
   align-items: center;
   justify-content: center; 
-  border-right: 1px solid #ffffff;
-  border-top: 1px solid #ffffff;
-  border-bottom: 1px solid #ffffff;
+  border-right: 1px solid $primary-color;;
+  border-top: 1px solid $primary-color;;
+  border-bottom: 1px solid $primary-color;;
   border-top-right-radius: 25px;
   border-top-left-radius: 25px;
-  background-color: #ffffff;
+  background-color: $primary-color;;
   width: 600px;
   height: 550px;
   padding: 5px 20px 60px 30px;
   line-height: 60px;
 }
-.container .testimonial-photo {
+.container {
+  .testimonial-photo {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 600px;
-  background-color: #686de0;
+  background-color:$backgroundcolor1;
 }
 
-.container .photo {
+.container{
+  .photo {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 150px;
   height: auto;
-  border: 8px solid #ffffff;
+  border: 8px solid $primary-color; ;
   border-radius: 50%;
   margin-top: -90px;
 }
-.container .testimonial-footer {
+.container {
+  .testimonial-footer {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -127,25 +136,30 @@ ul {
   border-bottom-right-radius: 25px;
   width: 600px;
   height: 125px;
-  background-color: #686de0;
-  color: #fff;
+  background-color:$backgroundcolor1;
+  color: $primary-color;
   line-height: 2px;
 }
-.container .testimonial-link {
+.container {
+  .testimonial-link {
   color: #b7b8da;
 }
-.container .testimonial-link:hover {
-  color: #ffffff;
+.container {
+  .testimonial-link:hover {
+  color: $primary-color;
 }
-.container .p1 {
+.container {
+  .p1 {
   font-size: 1.9rem;
 }
-.container .p2 {
+.container{
+   .p2 {
   font-size: 1.6rem;
   letter-spacing: 3px;
   text-transform: uppercase;
 }
-.container .p3 {
+.container {
+  .p3 {
   font-size: 1.3rem;
 }
 
@@ -162,27 +176,32 @@ ul {
   display: flex;
   justify-content: center;
 }
-.portfolio-container .portfolio-content {
+.portfolio-container {
+  .portfolio-content {
   display: grid;
   grid-gap: 20px;
   margin-top: 30px;
   grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: 200px;
 }
-.portfolio-container .portfolio-content a {
-  background-color: #fff;
+.portfolio-container {
+  .portfolio-content 
+  a {
+  background-color: $primary-color;
   border-radius: 5px;
   color: #000;
   margin-top: 20px;
   padding: 7px 15px;
 }
-.portfolio-container .portfolio-content .overlay {
+.portfolio-container {
+  .portfolio-content {
+    .overlay {
   background-color: #2a3146;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  color: #fff;
+  color:$primary-color;
   position: absolute;
   top: 0;
   left: 0;
@@ -191,12 +210,15 @@ ul {
   width: 100%;
   height: 100%;
 }
-.portfolio-container .portfolio-item {
+.portfolio-container {
+  .portfolio-item {
   border-radius: 20px;
   overflow: hidden;
   position: relative;
 }
-.portfolio-container .portfolio-item:hover .overlay {
+.portfolio-container {
+  .portfolio-item:hover {
+    .overlay {
   opacity: 1;
 }
 
@@ -205,13 +227,15 @@ ul {
     display: flex;
     justify-content: center;
   }
-  .portfolio-container .portfolio-content {
+  .portfolio-container {
+    .portfolio-content {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 @media screen and (max-width: 649px) {
-  header .advanced-logo img {
-    width: 400px;
+  header {
+    .advanced-logo img {
+    width: $width;
     padding-top: 20px;
     margin-top: -10px;
   }
@@ -223,31 +247,38 @@ ul {
     padding-top: 200px;
     width: 100%;
   }
-  .container .testimonial-header {
-    width: 400px;
+  .container {
+    .testimonial-header {
+    width: $width;
     height: 425px;
     line-height: 50px;
   }
-  .container .testimonial-photo {
-    width: 400px;
+  .container {
+    .testimonial-photo {
+    width: $width;
   }
-  .container .photo {
+  .container {
+    .photo {
     width: 150px;
   }
-  .container .testimonial-footer {
-    width: 400px;
+  .container{
+     .testimonial-footer {
+    width:$width;
     height: 100px;
     line-height: 2px;
   }
-  .container .p1 {
+  .container{
+     .p1 {
     font-size: 1.1rem;
   }
-  .container .p2 {
+  .container {
+    .p2 {
     font-size: 1.3rem;
     letter-spacing: 4px;
     text-transform: Uppercase;
   }
-  .container .p3 {
+  .container {
+    .p3 {
     font-size: 1.1rem;
   }
   .portfolio-container {
@@ -259,7 +290,9 @@ ul {
   }
 }
 @media screen and (max-width: 419px) {
-  header .advanced-logo img {
+  header{
+  .advanced-logo
+  img {
     padding-top: 20px;
     margin-top: 12px;
   }
@@ -271,37 +304,45 @@ ul {
     padding-top: 200px;
     width: 100%;
   }
-  .container .testimonial-header {
+  .container{
+     .testimonial-header {
     width: 300px;
     height: 350px;
     line-height: 40px;
   }
-  .container .testimonial-photo {
+  .container{
+    .testimonial-photo {
     width: 300px;
   }
-  .container .photo {
+  .container{
+    .photo {
     width: 125px;
   }
-  .container .testimonial-footer {
+  .container{
+     .testimonial-footer {
     width: 300px;
     height: 80px;
     line-height: 2px;
   }
-  .container .p1 {
+  .container{
+     .p1 {
     font-size: 1rem;
   }
-  .container .p2 {
+  .container{
+     .p2 {
     font-size: 1.1rem;
     letter-spacing: 4px;
     text-transform: Uppercase;
   }
-  .container .p3 {
+  .container {
+    .p3 {
     font-size: 0.8rem;
   }
   .portfolio-container {
     display: flex;
     justify-content: center;
   }
-  .portfolio-container .portfolio-content {
+  .portfolio-container{
+     .portfolio-content {
     grid-template-columns: repeat(1, 1fr);
   }
